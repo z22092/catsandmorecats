@@ -10,8 +10,6 @@ const { getCats } = require('../getCats');
 router.get('/cats', async (req, res) => {
   try {
 
-    calaboca
-
     const { max } = req.query;
 
     if (!max) {
