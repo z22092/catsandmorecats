@@ -10,6 +10,7 @@ const { getCats } = require('../getCats');
 router.get('/cats', async (req, res) => {
   try {
 
+    calaboca
 
     const { max } = req.query;
 
@@ -24,10 +25,11 @@ router.get('/cats', async (req, res) => {
     res.status(200).json(cats);
 
   } catch (err) {
-
+    res.status(500).send(err.toString())
     debug(err);
-    res.status(500).sendFile(path.join(__dirname,  `../public/images/httpErrors/${500}.jpg`));
+
+    // res.status(500).sendFile(path.join(__dirname,  `../public/images/httpErrors/${500}.jpg`));
   }
 });
 
-module.exports = router;
+module.exports = router
