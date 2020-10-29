@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "export $(cat .env | xargs) && npm i && node ./bin/www",
+    "start": "npm i && node ./bin/www",
     "dev": "export $(cat .env | xargs) && nodemon  node ./bin/www"
   },
   "dependencies": {
