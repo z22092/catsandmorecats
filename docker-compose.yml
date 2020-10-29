@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  catsexpress:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        environment: 
+            NODE_ENV: production
+            PORT: 8000
+            DEBUG: '*'
+        ports:
+            - 80:8000
+        container_name: node
+        volumes:
+            - ./:/app
+            - nodemodules:/app/node_modules
+volumes:
+    nodemodules: {}
